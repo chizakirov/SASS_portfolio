@@ -24,13 +24,24 @@ h3 {
 
 &.lg-heading{
   font-size: 6rem;
+  text-align: center;
   }
 
 &.sm-heading {
+  text-align: center;
   margin-bottom: 2rem;
   padding: 0.2rem 1rem;
   background: rgba(lighten($primary-color, 2), 0.5);
   }
+}
+
+hr {
+  height: 1px;
+  border: 0.7px solid $secondary-color;
+  margin: 1em 0;
+  padding: 0; 
+  margin-bottom: 2.5em;
+
 }
 
 a {
@@ -54,6 +65,7 @@ main {
   min-height: calc(100vh - 60px);
 
   .icons {
+    text-align: center;
     margin-top: 1rem;
 
     a {
