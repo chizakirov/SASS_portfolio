@@ -84,5 +84,10 @@
   }
   .projects {
     grid-template-columns: 1fr;
+
+    .video-center {
+      width: 400px;
+      height: 300px;
+    }
   }
 }
