@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)http://localhost:3000/order -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="shortcut icon" href="http://localhost:3000/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <link rel="stylesheet" href="./React App_files/semantic.min.css">
+    <title>React App</title>
+  <style type="text/css">body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+</style><style type="text/css">.home {
+  background-image: url(/static/media/bull.04db59c3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 1100px;
+  min-height: 100vh;
+  color: white;
+}
+
+.inner-home {
+  width: 100%;
+  min-height: 1100px;
+  background-image: linear-gradient(to top, rgba(0,0,0,.4), rgba(0,0,0,.3));
+}
+
+#home-title {
+  padding-top: 200px;
+  /* background-image: linear-gradient(to top, rgba(0,0,0,.8), rgba(0,0,0,.7)); */
+}
+
+
+hr {
+  height: 1px;
+  border: 0.5px solid rgb(58, 211, 58);
+  margin: 3em auto;
+  padding: 0; 
+  width: 80%;
+}
+</style><style type="text/css">.order-wrapper {
+  background-image: url(/static/media/bull.04db59c3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 1100px;
+  min-height: 100vh;
+  
+}
+
+.Order {
+  margin: 0 auto;  /* align this div in the middle horizontally */
+  width: 80%;
+  color: white;
+  min-height: 800px;
+}
+
+#order-title {
+  text-align: center;
+  font-size: 35px;
+  padding-top: 15px;
+}
+
+h3 {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+.stats {
+  margin: 50px auto;
+  width: 60%;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  font-style: italic;
+  background-image: linear-gradient(to top, rgba(0,0,0,.5), rgba(0,0,0,.5));
+  border: 1px solid gray;
+}
+
+.order-form {
+  margin: 50px auto;
+  padding: 10px;
+  width: 60%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-align-items: center;
+          align-items: center;
+  font-weight: bold;
+  font-size: 15px;
+  border: 1px solid gray;
+  background-image: linear-gradient(to top, rgba(0,0,0,.7), rgba(0,0,0,.5));
+}
+
+.order-input {
+  width: 50%;
+  height: 25px;
+  margin: 1em auto;
+  font-weight: bold;
+  border-radius: 4px;
+  border: 1px solid gray;
+}
+
+#order-button {
+  display: block;
+  width: 5em;
+  margin: 0 auto;
+  padding: 8px;
+  background-color: #28a745;
+  border: 1px solid #28a745;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+
+}
+
+#order-button:hover {
+  background-color: white;
+  border: 1px solid #28a745;
+  color: #28a745;
+}
+
+span {
+  color: red;
+}
+
+</style><style type="text/css">
+.research{
+  background-image: url(/static/media/bull.04db59c3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  /* 100vh to cover entire page */
+  color: white;
+  min-height: 1150px;
+}
+
+.main {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-around;
+          justify-content: space-around;
+  margin-top: 50px;
+}
+
+.chart {
+  background: rgb(224, 222, 222);
+  width: 60%;
+  height: 100%;
+  padding: 20px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.stock-stats{
+  width: 30%;
+  padding: 80px 50px;
+  background-image: linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0,.4));
+  border: 1px solid gray;
+  font-weight: bold;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.stock-stats p {
+  margin-left: 55px;
+}
+
+.news {
+  margin: 70px auto;
+  padding: 15px;
+  width: 95%;
+  background-image: linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0,.4));
+  border: 1px solid gray;
+  font-weight: bold;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.form {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#search-input {
+  width: 30%;
+  height: 30px;
+}
+
+h3 {
+  text-align: center;
+  font-size: 30px;
+  padding-top: 50px;
+  margin: 30px;
+}
+
+h4 {
+  font-size: 18px;
+  text-align: center;
+}
+
+p{
+  font-weight: bold;
+}
+
+#links {
+  color: white;
+  text-align: center;
+  font-style: italic;
+}
+
+.news-link {
+  margin-bottom: 8px;
+  margin-left: 200px;
+}
+#links:hover {
+    color: rgb(40, 104, 224); 
+}</style><style type="text/css">.account-wrapper {
+  background-image: url(/static/media/bull.04db59c3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  font-size: 35px;
+  padding-top: 50px;
+}
+
+.deposit {
+  width: 60%;
+  margin: 40px auto;
+  background-image: linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0,.8));
+  padding: 20px;
+  text-align: center;
+  border: 1px solid gray;
+}
+
+button {
+  display: block;
+  width: 5em;
+  margin: 7px auto;
+  padding: 8px;
+  background-color: #28a745;
+  border: 1px solid #28a745;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+input {
+  border-radius: 3px;
+  padding: 4px;
+  width: 40%;
+  margin-bottom: 5px;
+}
+
+.position_table {
+  width: 60%;
+  margin: 0 auto;
+  background-image: linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0,.8));
+  border: 1px solid gray;
+  padding: 20px;
+}
+
+.position_table th {
+  background-image: linear-gradient(to top, rgba(10,30,10,.6), rgba(36, 51, 39, 0.8));
+  background-blend-mode: darken;
+  font-weight: bold;
+  font-size: 15px;
+  padding-bottom: 5px;
+}
+
+td {
+  background-image: linear-gradient(to top, rgba(34, 218, 28, .5), rgba(31, 204, 54, .5));
+  text-align: center;
+}
+
+.order-detail {
+  font-weight: bold;
+  padding: 5px;
+}
+
+.order-detail:nth-child(1) {
+  width: 15%;
+}
+
+.order-detail:nth-child(2) {
+  width: 13%;
+}
+
+.order-detail:nth-child(4) {
+  width: 18%;
+}
+
+.order-detail:nth-child(5) {
+  width: 18%;
+}</style><style type="text/css">.wrapper {
+  background-image: url(/static/media/bull.04db59c3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 1100px;
+  min-height: 100vh;
+  color: white;
+}
+
+.inner{
+  margin: 0 auto;
+  padding: 130px;
+  width: 80%;
+  color: white;
+  min-height: 800px;
+}
+
+.log-form {
+  margin: 50px auto;
+  padding: 30px;
+  width: 60%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-align-items: center;
+          align-items: center;
+  font-weight: bold;
+  font-size: 15px;
+  border: 1px solid gray;
+  background-image: linear-gradient(to top, rgba(0,0,0,.5), rgba(0,0,0,.5));
+  box-shadow: 0 14px 28px rgba(128,128,128,0.25), 0 10px 10px rgba(128, 128, 128, 0.22);
+}
+
+.log-input {
+  width: 65%;
+  height: 35px;
+  margin: 0.8em auto;
+  font-weight: bold;
+  border-radius: 4px;
+  border: 1px solid gray;
+}
+
+button:hover {
+  background-color: white;
+  border: 1px solid #28a745;
+  color: #28a745;
+}
+</style><style type="text/css">* {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list {
+  height: 80px;
+  display: -webkit-flex;
+  display: flex;
+  list-style: none;
+  -webkit-justify-content: center;
+          justify-content: center;
+  background: linear-gradient(to top, gray, lightgray, gray);
+}
+
+.nav-item {
+  margin: auto 1.5em;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+a {
+  color: rgb(46, 167, 46);
+}
+
+a:hover {
+  color: black;
+}
+#right {
+  margin-left: auto;
+}
+
+.inline {
+  display: inline-block;
+  margin: 1.3em 1.5em;
+}</style><style type="text/css">/* Chart.js */
+/*
+ * DOM element rendering detection
+ * https://davidwalsh.name/detect-node-insertion
+ */
+@keyframes chartjs-render-animation {
+	from { opacity: 0.99; }
+	to { opacity: 1; }
+}
+
+.chartjs-render-monitor {
+	animation: chartjs-render-animation 0.001s;
+}
+
+/*
+ * DOM element resizing detection
+ * https://github.com/marcj/css-element-queries
+ */
+.chartjs-size-monitor,
+.chartjs-size-monitor-expand,
+.chartjs-size-monitor-shrink {
+	position: absolute;
+	direction: ltr;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	overflow: hidden;
+	pointer-events: none;
+	visibility: hidden;
+	z-index: -1;
+}
+
+.chartjs-size-monitor-expand > div {
+	position: absolute;
+	width: 1000000px;
+	height: 1000000px;
+	left: 0;
+	top: 0;
+}
+
+.chartjs-size-monitor-shrink > div {
+	position: absolute;
+	width: 200%;
+	height: 200%;
+	left: 0;
+	top: 0;
+}
+</style><script charset="utf-8" src="./React App_files/main.e2dd52fef8a5bdccea98.hot-update.js"></script></head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><div class="app"><nav><ul class="nav-list"><li class="nav-item"> <a href="http://localhost:3000/">Home</a> </li><li class="nav-item">   <a href="http://localhost:3000/account">Account</a> </li><li class="nav-item"> <a href="http://localhost:3000/order">Trade</a> </li><li class="nav-item"> <a href="http://localhost:3000/research">Research</a>  </li><div id="right"></div><li class="nav-item right"> <a href="http://localhost:3000/"> Logout </a> </li></ul></nav><div class="order-wrapper"><div class="Order"><h3>Enter a ticker symbol to place a trade</h3><form class="order-form"><label>Symbol <span>*</span>:</label><input class="order-input" type="text" name="symbol" placeholder="enter a symbol"><label>Company:</label><input class="order-input" type="text" name="companyName" disabled="" value=""><label>Trade Type <span>*</span>:</label><select class="order-input" type="text" name="type"><option>Select a trade type</option><option value="buy">Buy</option><option value="sell">Sell</option></select><label>Price <span>*</span>:</label><input class="order-input" type="number" name="price" disabled="" value="1"><label>Quantity <span>*</span>:</label><input class="order-input" type="number" name="quantity" placeholder="enter a quantity"><button id="order-button" type="submit">Order</button></form></div></div></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <script src="./React App_files/bundle.js"></script><script src="./React App_files/1.chunk.js"></script><script src="./React App_files/main.chunk.js"></script><script src="./React App_files/main.cf2bf6f67327549f3ad5.hot-update.js"></script>
+
+</body></html>
