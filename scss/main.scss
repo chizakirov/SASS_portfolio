@@ -35,6 +35,10 @@ h3 {
   }
 }
 
+h6 {
+  font-style: italic;
+}
+
 hr {
   height: 1px;
   border: 0.7px solid $secondary-color;
@@ -215,7 +219,7 @@ main {
   background: darken($primary-color, 10);
   color: set-text-color($primary-color);
   height: 60px;
-  font-size: 10px;
+  font-size: 7px;
 }
 
 @import 'mobile';
